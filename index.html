@@ -3,103 +3,158 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FaireFare Travels – Free Travel Consultation</title>
+  <title>Fair Fare Travels</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f3f4f6;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #2c2c2c;
     }
     header {
-      background-color: #1e40af;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1950&q=80');
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 1rem 2rem;
       text-align: center;
+      padding: 80px 20px;
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.25rem;
+    }
+    .container {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      background-color: #006400;
+      color: #fff;
+      border-radius: 8px;
+      padding: 15px 25px;
+      margin: 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover {
+      background-color: #228B22;
     }
     footer {
-      background-color: #1e40af;
-      color: white;
       text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
+      padding: 30px;
+      background-color: #fff;
+      font-size: 0.9rem;
+      color: #777;
     }
-    main {
-      padding: 2rem;
+    section {
+      margin-bottom: 50px;
+    }
+    .testimonial {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 10px auto;
+      max-width: 700px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .testimonial img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .testimonial-content {
+      text-align: left;
+    }
+    .testimonial-content p {
+      font-style: italic;
+      margin: 0;
+    }
+    .testimonial-content h4 {
+      margin-top: 10px;
+      font-weight: normal;
+      color: #444;
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>FaireFare Travels</h1>
-    <p>Your journey starts here.</p>
+    <h1>Fair Fare Travels</h1>
+    <p>Luxury travel bookings at your fingertips</p>
   </header>
 
-  <main>
-    <section id="consultation" style="max-width: 700px; margin: 3rem auto; background: #f9fafb; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
-      <h2 style="font-size: 1.75rem; color: #1e40af; margin-bottom: 1rem;">📅 Book Your Free Consultation with a Travel Booking Agent</h2>
-      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Ready to find the perfect fare or plan your dream escape? Fill out the quick form below and one of our agents will reach out to help — free of charge!</p>
-      
-      <form id="consultForm" action="https://formspree.io/f/mrbkljze" method="POST">
-        <label for="name">Full Name:</label>
-        <input type="text" name="name" id="name" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;">
-
-        <label for="email">Email Address:</label>
-        <input type="email" name="_replyto" id="email" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;">
-
-        <label for="destination">Preferred Destination(s):</label>
-        <input type="text" name="destination" id="destination" placeholder="Ex: Greece, Costa Rica..." style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;">
-
-        <label for="tripType">Trip Type:</label>
-        <select name="tripType" id="tripType" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;">
-          <option value="vacation">Vacation</option>
-          <option value="honeymoon">Honeymoon</option>
-          <option value="group">Group Travel</option>
-          <option value="business">Business Trip</option>
-          <option value="other">Other</option>
-        </select>
-
-        <label for="date">Ideal Travel Date:</label>
-        <input type="date" name="date" id="date" style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;">
-
-        <label for="message">Tell us a bit about your trip or questions:</label>
-        <textarea name="message" id="message" rows="5" required style="width: 100%; padding: 0.75rem; margin-bottom: 1rem; border-radius: 8px; border: 1px solid #ccc;"></textarea>
-
-        <button type="submit" style="background-color: #1e40af; color: white; padding: 0.75rem 1.5rem; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer;">Request Free Consultation</button>
-      </form>
-
-      <p id="successMessage" style="display:none; color: #059669; font-weight: bold; margin-top: 1rem;">✅ Thank you! Your request has been sent. We'll be in touch soon!</p>
-      <p style="font-size: 0.9rem; color: #6b7280; margin-top: 1rem;">We respect your privacy. Your information will never be shared.</p>
+  <div class="container">
+    <!-- Banner Widget -->
+    <section>
+      <div class="eg-affiliate-banners" data-program="us-expedia" data-network="pz" data-layout="medium-rectangle" data-image="sailing" data-message="bye-bye-bucket-list-hello-adventure" data-link="home" data-camref="1100l5chnN" data-pubref="FFT"></div>
+      <script class="eg-affiliate-banners-script" src="https://affiliates.expediagroup.com/products/banners/assets/eg-affiliate-banners.js"></script>
     </section>
-  </main>
+
+    <!-- Booking Buttons -->
+    <section>
+      <a href="https://expedia.com/affiliates/fair_fare_travels" class="button">Book Flights (Expedia)</a>
+      <a href="https://www.hotels.com/affiliates/fair_fare_travels" class="button">Book Hotels (Hotels.com)</a>
+      <a href="https://vrbo.com/affiliates/fair_fare_travels" class="button">All-Inclusive Travel (Vrbo)</a>
+      <a href="https://expedia.com/affiliate/aFQAmqn" class="button">July 4th Getaway Deals</a>
+    </section>
+
+    <!-- Booking Widgets -->
+    <section>
+      <h2>Book Your Trip</h2>
+      <h3>Expedia</h3>
+      <div class="eg-widget" data-widget="search" data-program="us-expedia" data-lobs="stays,flights" data-network="pz" data-camref="1100l5chnN" data-pubref="FFT"></div>
+
+      <h3>Hotels.com</h3>
+      <div class="eg-widget" data-widget="search" data-program="us-hcom" data-lobs="stays" data-network="pz" data-camref="1101l5cvFU" data-pubref="FFT"></div>
+
+      <h3>Vrbo</h3>
+      <div class="eg-widget" data-widget="search" data-program="us-vrbo" data-lobs="stays" data-network="pz" data-camref="1110l88vo" data-pubref="FFT"></div>
+
+      <script class="eg-widgets-script" src="https://affiliates.expediagroup.com/products/widgets/assets/eg-widgets.js"></script>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section>
+      <h2>What Our Travelers Say</h2>
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Melissa">
+        <div class="testimonial-content">
+          <p>"Fair Fare Travels made our anniversary trip absolutely seamless and stress-free. We’ll never book anywhere else again!"</p>
+          <h4>– Melissa T., Atlanta GA</h4>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Derek">
+        <div class="testimonial-content">
+          <p>"I booked a last-minute July 4th getaway and got amazing deals! Love the simplicity and the luxury options."</p>
+          <h4>– Derek L., Brooklyn NY</h4>
+        </div>
+      </div>
+      <div class="testimonial">
+        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Naomi">
+        <div class="testimonial-content">
+          <p>"It was my first time planning a family vacation solo, and Fair Fare Travels made it feel like a breeze. Highly recommend!"</p>
+          <h4>– Naomi R., Austin TX</h4>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 FaireFare Travels. All rights reserved.</p>
+    &copy; 2025 Fair Fare Travels · Affiliate commissions may apply
   </footer>
-
-  <script>
-    const form = document.getElementById('consultForm');
-    const message = document.getElementById('successMessage');
-
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: "POST",
-        body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
-      }).then(response => {
-        if (response.ok) {
-          form.reset();
-          message.style.display = "block";
-        } else {
-          alert("Oops! Something went wrong. Please try again.");
-        }
-      });
-    });
-  </script>
 </body>
 </html>
